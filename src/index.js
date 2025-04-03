@@ -1,8 +1,17 @@
+
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+<head>
+<meta name="description" content="Little Lemon Restaurant reservation system"/>
+<meta name="og:title" content="Little Lemon Restaurant "/>
+<meta name="og:description" content="Little Lemon Restaurant  with a focus on the reservation system"/>
+<meta name="og:image" content="./Assets/Logo.svg"/>
+</head>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
