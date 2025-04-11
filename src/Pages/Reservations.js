@@ -1,9 +1,11 @@
+import BookingForm from "../Components/BookingForm"
+import  Main  from "../Main"
 function Reservations() {
     return (
-        <div>
-      
-        <h1>Welcome to the Little Lemon Reservations </h1>
-        </div>
+        <div className="reservations">
+       <h1>hello</h1>
+       <Main/>
+       </div>
     )
 }
 

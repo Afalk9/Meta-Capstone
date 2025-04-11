@@ -20,7 +20,7 @@ function App() {
     <>
   <Header/>
   <Nav/>
-  <Main/>
+  
   <Footer/>
   </>
     )

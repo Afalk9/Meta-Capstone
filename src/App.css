@@ -36,27 +36,221 @@
     transform: rotate(360deg);
   }
 }
+.navigation{
+  display: flex;
+  flex-wrap: wrap;
+  max-width:100%;
+  
+  
+}
+@media screen and (max-width:400px){
+  .navigation{
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item{
+    flex: 1 1 auto;
+  }
+}
+
 *{
   font-family: sans-serif;
 }
-nav {
+nav, footer {
   background: #ee9972;
   padding: 20px;
+  
 }
-nav a {
+nav a{
+  padding-top: 10px;
+}
+nav img{
+  padding-right:40px;
+  margin-top: 0px;
+}
+
+.nav-item{
   color: #edefee;
   text-decoration: none;
   font-size: 20px;
   margin-right: 20px;
 }
-
-nav-footer {
-  background: #ee9972;
-  padding: 20px;
-}
-nav-footer a {
-  color: green;
+.welcomeUsername{
+  color: #edefee;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 20px; 
+  padding-top: 10px;
+  margin-left: auto;
+  }
+
+footer h5{
+  color: #edefee;
+  text-decoration: none;
+  margin-right: 20px;
+} 
+footer{
+  display: flex;
+  height: 5vh;
+}
+footer a{
+  color:#edefee;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.welcome{
+  text-align: center;
+  background-color: #282c34;
+  margin-top: -2%;
+  color: #edefee;
+  position: relative;
+  margin-top: 0%;
+  height: 150dvh;
+}
+.homepageText{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #edefee;
+  position: absolute;
+  left: 50%;
+  top:2%;
+  translate: -50%;
+  background-color: #282c3480;
+  border-radius: 10%;
   
 }
+.homepageSpecials{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width:760px){
+  .homepageSpecials{
+    flex-direction: column;
+    align-items: center;
+  }
+  .welcome{
+    height: 250vh;
+  }
+  
+}
+.special{
+  width: 48vw;
+  text-align: center;
+}
+.specialDescription{
+  width: 30vw;
+  margin-left: 50%;
+  translate: -50%;
+}
+.specialImage{
+  height: 40dvh;
+}
+
+.foodPic {
+  flex: 3;
+  width:100%;
+  height:80vh;
+ 
+}
+
+.item{
+  display: grid;
+  grid-template-columns:10vw,30vw,20vw,30vw,10vw;
+  grid-template-rows: repeat(4,5vh);
+  background-color: #495E57;
+  height: 22vh;
+}
+
+.spacing{
+  grid-column: 1/span 5;
+  grid-row: 4;
+  background-color: #ee9972;
+  height: 5vh;
+
+}
+.frontVerticalSpacing{
+  background-color: #ee9972;
+  grid-column: 1;
+  grid-row: 1 /span 4;
+
+}
+.endVerticalSpacing{
+  background-color: #ee9972;
+  grid-column: 5;
+  grid-row: 1 /span 4;
+
+}
+
+.item .nameMenu{
+  grid-column: 2;
+  grid-row: 1;
+  color:white;
+  text-align: center;
+}
+.item .descriptionMenu {
+  grid-column: 2 /span 2;
+  grid-row: 2;
+  color:white;
+  margin-left:50%;
+}
+.item .priceMenu{
+  grid-column: 2;
+  grid-row: 3;
+  color:white;
+  margin-left:50%;
+}
+.item .imageMenu{
+  grid-column: 4;
+  grid-row:1 /span 3;
+  width:20vw;
+  height: 15vh;
+  margin-left: 10%;
+  margin-top: 1vh;
+  
+  border-radius: 10%;}
+
+  .aboutTitle{
+    text-align: center;
+    padding-top: 5%;
+  }
+  .aboutInfo{
+    background-color: #282c34;
+    color: #edefee;
+   height: 80vh;
+   margin-top: -2%;
+  }
+  .bookingForm{
+    display: grid; 
+    max-width: 98vw; 
+    gap: 20px;
+    height: 80vh;
+    
+  }
+  .submitButton{
+    color: #edefee;
+    background-color: #282c34;
+    border-radius: 30%;
+    font-size: large;
+    width: 10vw;
+    height: 10vh;
+    margin-left: 50%;
+
+  translate: -50%;
+  }
+  
+  .reservations{
+  margin-left: 50%;
+
+  translate: -50%;
+  }
+
+  .LoginForm{
+    display: grid; 
+    max-width: 40vw; 
+    gap: 20px;
+    height: 40vh;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  
