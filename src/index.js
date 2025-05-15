@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 <meta name="og:description" content="Little Lemon Restaurant  with a focus on the reservation system"/>
 <meta name="og:image" content="./Assets/Logo.svg"/>
 <meta name='viewport' content='width=device-width, initial-scale=1'/>
+<script src="https://raw.githubusercontent.com/courseraap/capstone/main/api.js"></script>
 </head>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
