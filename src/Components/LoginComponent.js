@@ -9,7 +9,7 @@ const LoginForm=()=>{
 const handleSubmit = (e)=>{
     e.preventDefault();
     setFormData({...formData, username: inputUsername});
-    alert(`Welcome ${formData.username}`)
+    alert(`Welcome ${inputUsername}`)
 }
     return(
         <form className="loginForm" onSubmit={handleSubmit}>
@@ -18,7 +18,7 @@ const handleSubmit = (e)=>{
             type="text" 
             id="username"
             name="username"
-            value={formData.username}
+            value={inputUsername}
             onChange={(e)=>setInputUsername(e.target.value)}
             />
             <label htmlFor="password">Password</label>

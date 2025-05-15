@@ -20,6 +20,11 @@ const today = new Date();
 const selectedDate =new Date(formData.resdate);
 today.setHours(0,0,0,0);
 selectedDate.setHours(0,0,0,0);
+
+if(!formData.resdate || !formData.restime || !formData. guests || !formData.occasion){
+    setError("Please fill out all fields");
+    return;
+}
 if(parseInt(formData.guests ,10)<=1){
     setError("Reservation must befor more than 1 person");
     return;
