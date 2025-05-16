@@ -47,51 +47,69 @@ if(submitted) {
     return<Confirmation formData={formData}/>;
 }
     return(
+        <main>
+            <h1>Make a Reservation!</h1>
         <form className="bookingForm" onSubmit={handleSubmit}>
-            <label htmlFor="resdate">Choose date</label>
-            <input 
-            type="date"
-            id="resdate" 
-            name="resdate" 
-            value={formData.resdate} 
-            onChange={handleChange}/>
+            <fieldset>
+                <legend id ="form-title">Reservation Details</legend>
+                <div>
+                    <label htmlFor="resdate">Choose date</label>
+                    <input 
+                    type="date"
+                    id="resdate" 
+                    name="resdate" 
+                    value={formData.resdate} 
+                    onChange={handleChange}
+                    required/>
+                </div>
+                <div>
+                    <label htmlFor="restime">Choose time</label>
+                    <select 
+                    id="restime" 
+                    name ="restime" 
+                    value={formData.restime}
+                    disabled={!formData.resdate}
+                    onChange={handleChange}>
+                        {timesForSelctedDate.map((time) => (
+                            <option key={time} value={time}>{time}</option>
+                        ))}
+                    
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="guests">Number of guests</label>
+                    <input type="number" 
+                    placeholder="1" 
+                    min="1" 
+                    max="100" 
+                    id="guests" 
+                    name="guests" 
+                    value={formData.guests}
+                    onChange={handleChange}
+                    required 
+                    aria-describedby="guestHint"/>
+                    <small id="guestHint"> Minimum two guests required</small>
+                </div>
+                <div>
+    
+                    <label htmlFor="occasion">Occasion</label>
+                    <select 
+                    id="occasion" 
+                    name="occasion" 
+                    value={formData.occasion}
+                    onChange={handleChange}>
+                        <option>Birthday</option>
+                        <option>Anniversary</option>
+                    </select>
 
-            <label htmlFor="restime">Choose time</label>
-            <select 
-            id="restime" 
-            name ="restime" 
-            value={formData.restime}
-            disabled={!formData.resdate}
-            onChange={handleChange}>
-                {timesForSelctedDate.map((time) => (
-                    <option key={time} value={time}>{time}</option>
-                ))}
-               
-            </select>
-
-            <label htmlFor="guests">Number of guests</label>
-            <input type="number" 
-            placeholder="1" 
-            min="1" 
-            max="100" 
-            id="guests" 
-            name="guests" 
-            value={formData.guests}
-            onChange={handleChange}/>
-
-            <label htmlFor="occasion">Occasion</label>
-            <select 
-            id="occasion" 
-            name="occasion" 
-            value={formData.occasion}
-            onChange={handleChange}>
-                <option>Birthday</option>
-                <option>Anniversary</option>
-            </select>
+                                    
+            </div>
             {error&& <p style={{color:"red"}}>{error}</p>}
-            <button type="submit"  className="submitButton">Make Your reservation</button>
-        </form>
 
+            </fieldset>
+            <button type="submit"  className="submitButton" aria-label="submit reservation form">Make Your reservation</button>
+        </form>
+        </main>
     )}
 
 export default BookingForm
